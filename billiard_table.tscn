@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://ta60x5em2tef"]
+
+[ext_resource type="PackedScene" uid="uid://da6eqj2s2rv6c" path="res://Assets/uploads_files_4287169_Billiard+Table/Billiard Table.blend" id="1_ac01b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8k5m"]
+size = Vector3(1.63061, 0.00429588, 1)
+
+[node name="Billiard Table2" instance=ExtResource("1_ac01b")]
+
+[node name="CollisionShape3D" parent="Billiard Table_Fabric/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0131615, 0.00440465, -0.0099322)
+shape = SubResource("BoxShape3D_h8k5m")
+
+[node name="9 Ball" parent="." index="7"]
+visible = false
+
+[node name="8 Ball" parent="." index="8"]
+visible = false
+
+[node name="14 Ball" parent="." index="9"]
+visible = false
+
+[node name="15 Ball" parent="." index="10"]
+visible = false
+
+[node name="3 Ball" parent="." index="11"]
+visible = false
+
+[node name="10 Ball" parent="." index="12"]
+visible = false
+
+[node name="11 Ball" parent="." index="13"]
+visible = false
+
+[node name="5 Ball" parent="." index="14"]
+visible = false
+
+[node name="4 Ball" parent="." index="15"]
+visible = false
+
+[node name="12 Ball" parent="." index="16"]
+visible = false
+
+[node name="7 Ball" parent="." index="17"]
+visible = false
+
+[node name="13 Ball" parent="." index="18"]
+visible = false
+
+[node name="2 Ball" parent="." index="19"]
+visible = false
+
+[node name="6 Ball" parent="." index="20"]
+visible = false
+
+[node name="White" parent="." index="21"]
+visible = false
+
+[node name="1 Ball" parent="." index="22"]
+visible = false
+
+[node name="Cue 1" parent="." index="23"]
+visible = false
+
+[node name="Cues 2" parent="." index="24"]
+visible = false

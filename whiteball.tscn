@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://2qxbs3abjr4i"]
+
+[ext_resource type="PackedScene" uid="uid://kvw2qx3brmcj" path="res://white.tscn" id="1_p7bdb"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ktydi"]
+radius = 0.0262851
+
+[node name="Ball" type="RigidBody3D"]
+transform = Transform3D(0.99944, -4.24329e-08, 2.06757e-08, -1.10081e-08, 0.99944, 3.09486e-08, 3.61361e-08, 5.11921e-08, 0.99944, 0, 0, 0)
+
+[node name="White" parent="." instance=ExtResource("1_p7bdb")]
+transform = Transform3D(1, 4.24567e-08, -2.06873e-08, 1.10143e-08, 1, -3.0966e-08, -3.61564e-08, -5.12208e-08, 1, -1.19209e-07, 2.98023e-08, 7.45476e-09)
+
+[node name="White2" parent="." instance=ExtResource("1_p7bdb")]
+transform = Transform3D(1, 4.24567e-08, -2.06873e-08, 1.10143e-08, 1, -3.0966e-08, -3.61564e-08, -5.12208e-08, 1, -1.19209e-07, 2.98023e-08, 7.45476e-09)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_ktydi")

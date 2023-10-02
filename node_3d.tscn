@@ -1,5 +1,31 @@
-[gd_scene format=3 uid="uid://cw6slpx0fw2x"]
+[gd_scene load_steps=5 format=3 uid="uid://cw6slpx0fw2x"]
+
+[ext_resource type="PackedScene" uid="uid://ta60x5em2tef" path="res://billiard_table.tscn" id="1_t28tn"]
+[ext_resource type="PackedScene" uid="uid://ck2kfsif26wfc" path="res://ball.tscn" id="2_uek3f"]
+[ext_resource type="Texture2D" uid="uid://b110s6dq7vx4h" path="res://Assets/uploads_files_4287169_Billiard+Table/Ball Textures/16072.jpg" id="3_iedx7"]
+[ext_resource type="Script" path="res://Scripts/PlaySystem.gd" id="4_4js0o"]
 
 [node name="main" type="Node3D"]
 
 [node name="Node3D" type="Node3D" parent="."]
+
+[node name="Billiard Table" parent="." instance=ExtResource("1_t28tn")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.12568, 0.992071, 0, -0.992071, 0.12568, -0.718327, 1.47695, 0.28381)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.807177, 0.59031, 0, -0.59031, 0.807177, 0, 1.25937, 1.71242)
+
+[node name="Ball2" parent="." instance=ExtResource("2_uek3f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.657274, 0.391714, 0)
+_texture = ExtResource("3_iedx7")
+
+[node name="PlaySystem" type="Node3D" parent="." node_paths=PackedStringArray("_cue_ball")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.187718, 0.391714, 0)
+script = ExtResource("4_4js0o")
+_cue_ball = NodePath("CueBall")
+
+[node name="CueBall" parent="PlaySystem" instance=ExtResource("2_uek3f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.546154, 0, -0.00125533)
+_texture = null
